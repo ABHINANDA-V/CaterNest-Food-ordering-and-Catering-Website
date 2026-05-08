@@ -1,0 +1,41 @@
+.introSection {
+    background: linear-gradient(to right, rgba(249, 250, 247, 0.9) 30%, rgba(249, 250, 247, 0.2) 100%), 
+                url("/images/heroimage.webp");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: cover; 
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+.introhead {
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 1.1;
+    font-style: italic;
+    font-size: clamp(2.5rem, 6vw, 3.7rem);
+}
+
+.introSectionButton {
+    background-color: #eb880f!important; 
+    border: none!important;
+    font-weight: bold;
+    padding: 12px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.3);
+}
+
+.introSectionButton:hover {
+    background-color: #e67e00;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .introSection {
+        background-position: center;
+        background: linear-gradient(rgba(249, 250, 247, 0.85), rgba(249, 250, 247, 0.85)), 
+                    url("/images/heroimage.webp");
+        background-size: cover;
+        text-align: center;
+    }
+}

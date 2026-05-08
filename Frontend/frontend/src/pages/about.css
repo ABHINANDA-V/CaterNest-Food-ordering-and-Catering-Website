@@ -1,0 +1,23 @@
+section {
+  transition: all 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+h2 {
+  letter-spacing: 0.5px;
+}
+
+p {
+  font-size: 0.9rem;
+}
+
+img {
+  object-fit: cover;
+}
+.subsubhead
+{
+  color: var(--secondary-color);
+}

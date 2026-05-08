@@ -1,0 +1,51 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navBar
+{
+    box-shadow:0px 4px 16px rgba(0,0,0,0.3);
+}
+.navBar .navBrand
+{
+    font-size: 37px;
+    font-weight: bold;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style: italic;
+}
+.navBar .navLink
+{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: var(--primary-color);
+}
+.navBar .navLink:hover
+{
+    color: orange;
+}
+.navBar .navLink.active
+{
+    color: var(--orange-color);
+}
+.navBar .navbarButton
+{
+    margin-left: 20px;
+    width:100px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+.navBar .toggleButton
+{
+    background-color: var(--primary-color);
+    border: none;
+}
+.navBar .toggleButton:hover
+{
+    background-color: var(--orange-color);
+}

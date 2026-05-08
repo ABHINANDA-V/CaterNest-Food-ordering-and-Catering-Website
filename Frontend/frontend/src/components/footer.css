@@ -1,0 +1,35 @@
+*
+{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    text-decoration: none;
+}
+.footerClass
+{
+    width:100%;
+    background-color: rgb(4, 65, 12);
+    color: white;
+    margin-top: 40px;
+    padding: 30px;
+}
+.footerHead,.footerSubhead
+{
+    color:var(--secondary-color);
+}
+.footerLink
+{
+    text-decoration: none;
+    color: var(--light-color);
+}
+.footerLink:hover
+{
+    color:var(--secondary-color);
+}
+.footerIcon
+{
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}

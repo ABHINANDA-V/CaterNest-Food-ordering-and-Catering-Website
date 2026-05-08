@@ -1,0 +1,95 @@
+
+/* Header Section */
+.checkout-header {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  background-image: url('https://images.unsplash.com/photo-1555244162-803834f70033?w=1200&h=400&fit=crop');
+  background-size: cover;
+  background-position: center;
+}
+.checkout-card
+{
+   border: none;
+   border-radius:var(--border-radius) ;
+   box-shadow: var(--box-shadow);
+   max-width: 700px;
+   padding: 40px;  
+   width: 100%;
+   margin-top: 20px;
+} 
+
+.section-title {
+  display: flex;
+  align-items: center;
+}
+
+.section-icon {
+  font-size: 2rem;
+}
+
+/* Delivery Option Card */
+.delivery-option-card {
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.delivery-option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.delivery-radio {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Payment Option Card */
+.payment-option-card {
+  border: 2px solid #dee2e6;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.payment-option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.payment-radio {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Place Order Button */
+.place-order-btn {
+  border-radius: 30px;
+  padding: 18px;
+  font-weight: bold;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Order Summary */
+.order-summary-card {
+  border: none;
+  border-radius: 15px;
+  position: sticky;
+  top: 20px;
+}
+
+.summary-item-img {
+  border-radius: 10px;
+}
+
+/* Footer */
+.checkout-footer {
+  background-color: #212529;
+  color: white;
+  padding: 30px 0;
+  margin-top: 50px;
+}

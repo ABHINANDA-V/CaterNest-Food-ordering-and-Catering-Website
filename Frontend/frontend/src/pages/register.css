@@ -1,0 +1,48 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.registerCard
+{
+   border: none;
+   border-radius:var(--border-radius) ;
+   box-shadow: var(--box-shadow);
+   max-width: 700px;
+   padding: 40px;  
+   width: 100%;
+   margin-top: 20px;
+}
+.registerContainer
+{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.label
+{
+    font-size: 18px;
+    color:var(--primary-color);
+    font-weight: bold;
+}
+.errorPara
+{
+    color:red;
+}
+.registerBtn
+{
+    height: 40px;
+    width:100%;
+    background-color: var(--primary-color);
+    color:var(--light-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+.registerBtn:hover
+{
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+ 

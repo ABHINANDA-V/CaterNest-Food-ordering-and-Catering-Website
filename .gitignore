@@ -1,0 +1,35 @@
+# =========================
+# FRONTEND
+# =========================
+
+Frontend/frontend/node_modules/
+Frontend/frontend/dist/
+Frontend/frontend/build/
+Frontend/frontend/.env
+
+# =========================
+# BACKEND
+# =========================
+
+Backend/venv/
+Backend/env/
+
+Backend/__pycache__/
+Backend/*.py[cod]
+
+Backend/db.sqlite3
+
+Backend/.env
+Frontend/.env
+
+Backend/staticfiles/
+Backend/media/
+
+# =========================
+# SYSTEM FILES
+# =========================
+
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
