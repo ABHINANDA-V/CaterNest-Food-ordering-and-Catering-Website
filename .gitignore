@@ -5,7 +5,9 @@
 Frontend/frontend/node_modules/
 Frontend/frontend/dist/
 Frontend/frontend/build/
+
 Frontend/frontend/.env
+Frontend/frontend/src/.env
 
 # =========================
 # BACKEND
@@ -14,13 +16,12 @@ Frontend/frontend/.env
 Backend/venv/
 Backend/env/
 
-Backend/__pycache__/
-Backend/*.py[cod]
+**/__pycache__/
+*.py[cod]
 
 Backend/db.sqlite3
 
 Backend/.env
-Frontend/.env
 
 Backend/staticfiles/
 Backend/media/
