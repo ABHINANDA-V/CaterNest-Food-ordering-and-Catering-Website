@@ -185,3 +185,10 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 print("Cloud Name:", os.getenv("CLOUDINARY_CLOUD_NAME"))
 print("API Key:", os.getenv("CLOUDINARY_API_KEY"))
 print("Storage:", DEFAULT_FILE_STORAGE)
+
+
+print("========== CLOUDINARY DEBUG ==========")
+print("Cloud Name:", os.getenv("CLOUDINARY_CLOUD_NAME"))
+print("API Key:", os.getenv("CLOUDINARY_API_KEY"))
+print("Storage Backend:", DEFAULT_FILE_STORAGE)
+print("======================================")
