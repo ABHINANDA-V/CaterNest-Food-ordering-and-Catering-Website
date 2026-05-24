@@ -20,16 +20,23 @@ class CreateFoodItemView(CreateAPIView):
 
     def create(self, request, *args, **kwargs):
         print("REQUEST DATA:", request.data)
+        print("FILES:", request.FILES)
 
         serializer = self.get_serializer(data=request.data)
 
         if not serializer.is_valid():
-            print("ERRORS:", serializer.errors)
+            print("SERIALIZER ERRORS:", serializer.errors)
             return Response(serializer.errors, status=400)
 
-        serializer.save(available=True)
-
-        return Response(serializer.data, status=201)
+        try:
+            serializer.save(available=True)
+            print("SAVED SUCCESSFULLY")
+            return Response(serializer.data, status=201)
+        except Exception as e:
+            print("SAVE ERROR:", str(e))
+            import traceback
+            traceback.print_exc()
+            return Response({"error": str(e)}, status=500)
 
 # get all categories
 class CategoryListView(ListAPIView):
@@ -39,8 +46,27 @@ class CategoryListView(ListAPIView):
 class CreateCategoryView(generics.CreateAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
-    permission_classes = [permissions.IsAdminUser] 
-    parser_classes = [MultiPartParser, FormParser]   
+    permission_classes = [permissions.IsAdminUser]
+    parser_classes = [MultiPartParser, FormParser]
+
+    def create(self, request, *args, **kwargs):
+        print("CATEGORY REQUEST DATA:", request.data)
+        print("CATEGORY FILES:", request.FILES)
+
+        serializer = self.get_serializer(data=request.data)
+
+        if not serializer.is_valid():
+            print("CATEGORY ERRORS:", serializer.errors)
+            return Response(serializer.errors, status=400)
+
+        try:
+            serializer.save()
+            return Response(serializer.data, status=201)
+        except Exception as e:
+            print("CATEGORY SAVE ERROR:", str(e))
+            import traceback
+            traceback.print_exc()
+            return Response({"error": str(e)}, status=500)
 
 
 # get all food items
