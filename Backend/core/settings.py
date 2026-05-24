@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'cloudinary_storage',
     'django.contrib.staticfiles',
 
     'rest_framework',
@@ -55,8 +56,7 @@ INSTALLED_APPS = [
     'dashboard',
 
     'cloudinary',
-    'cloudinary_storage',
-
+    
 ]
 AUTH_USER_MODEL = 'users.User'
 
@@ -164,9 +164,12 @@ cloudinary.config(
 # Django 6 storage
 # Django storage
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
 
 STORAGES = {
+    "default": {
+        "BACKEND": "cloudinary_storage.storage.MediaCloudinaryStorage",  # ← ADD THIS
+    },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
     },
