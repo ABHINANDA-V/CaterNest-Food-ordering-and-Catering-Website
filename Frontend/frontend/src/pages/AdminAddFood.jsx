@@ -102,7 +102,12 @@ const AdminAddFood = () => {
       formData.append("image", categoryForm.image);
     }
 
-    categoryMutation.mutate(formData);
+   categoryMutation.mutate(formData, {
+  onError: (error) => {
+    console.log(error.response?.data);
+    alert(JSON.stringify(error.response?.data));
+  },
+});
   };
 
   const handleChange = (e) => {
@@ -144,7 +149,13 @@ const AdminAddFood = () => {
     formData.append("category", form.category);
     formData.append("description", form.description);
     if (form.image) formData.append("image", form.image);
-    mutation.mutate(formData);
+    
+   mutation.mutate(formData, {
+  onError: (error) => {
+    console.log(error.response?.data);
+    alert(JSON.stringify(error.response?.data));
+  },
+});
   };
 
   const categories = data?.data?.results || [];
