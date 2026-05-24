@@ -42,6 +42,7 @@ class CreateFoodItemView(CreateAPIView):
 class CategoryListView(ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    pagination_class = None 
 
 class CreateCategoryView(generics.CreateAPIView):
     queryset = Category.objects.all()

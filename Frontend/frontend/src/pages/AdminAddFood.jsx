@@ -38,10 +38,11 @@ const AdminAddFood = () => {
 
   const categoryMutation = useMutation({
     mutationFn: createCategory,
-    onSuccess: () => {
+    onSuccess: async () => {
       alert("Category added successfully");
 
-      queryClient.invalidateQueries(["categories"]);
+    await queryClient.invalidateQueries({ queryKey: ["categories"] });
+    await queryClient.refetchQueries({ queryKey: ["categories"] });
 
       setCategoryForm({
         name: "",
@@ -158,7 +159,7 @@ const AdminAddFood = () => {
 });
   };
 
-  const categories = data?.data?.results || [];
+  const categories = data?.data?.results || data?.data || [];
 
   return (
     <Container className="py-5">
