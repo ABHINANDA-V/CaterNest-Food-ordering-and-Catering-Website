@@ -7,6 +7,9 @@ from rest_framework.generics import UpdateAPIView
 from rest_framework import generics, permissions
 from django.db.models import Q
 
+from rest_framework.response import Response
+from rest_framework import status
+
 
 
 class CreateFoodItemView(CreateAPIView):
@@ -15,8 +18,18 @@ class CreateFoodItemView(CreateAPIView):
     permission_classes = [IsAdminUser]
     parser_classes = (MultiPartParser, FormParser)
 
-    def perform_create(self, serializer):
+    def create(self, request, *args, **kwargs):
+        print("REQUEST DATA:", request.data)
+
+        serializer = self.get_serializer(data=request.data)
+
+        if not serializer.is_valid():
+            print("ERRORS:", serializer.errors)
+            return Response(serializer.errors, status=400)
+
         serializer.save(available=True)
+
+        return Response(serializer.data, status=201)
 
 # get all categories
 class CategoryListView(ListAPIView):
